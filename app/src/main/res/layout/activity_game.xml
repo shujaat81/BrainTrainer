@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backbrain"
+    tools:context="com.example.hasan.braintrainer.GameActivity">
+
+    <TextView
+        android:id="@+id/timeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="19dp"
+        android:background="@android:color/holo_orange_light"
+        android:padding="10dp"
+        android:text="@string/time_remain"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/scoreID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timeID"
+        android:layout_alignBottom="@+id/timeID"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/holo_orange_light"
+        android:padding="10dp"
+        android:text="@string/score_of"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/operationID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_blue_light"
+        android:padding="15dp"
+        android:text="@string/operatin_view"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/checkerID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayoutID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:background="@android:color/holo_red_light"
+        android:padding="6dp"
+        android:text="@string/result_view"
+        android:textSize="30dp"
+        android:visibility="invisible" />
+
+    <GridLayout
+        android:id="@+id/gridLayoutID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/operationID"
+        android:layout_margin="20dp"
+        android:layout_marginTop="19dp">
+
+        <Button
+            android:id="@+id/button2ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="@android:color/holo_red_light"
+            android:onClick="calculate"
+            android:padding="15dp"
+            android:tag="1"
+            android:text="@string/answer2"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button3ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="?attr/colorControlActivated"
+            android:onClick="calculate"
+            android:padding="15dp"
+            android:tag="2"
+            android:text="@string/answer3"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button4ID"
+            android:tag="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="1"
+            android:layout_rowWeight="1"
+            android:background="@android:color/holo_orange_light"
+            android:onClick="calculate"
+            android:padding="15dp"
+            android:text="@string/answer4"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button1ID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            android:layout_rowWeight="1"
+            android:background="@android:color/holo_orange_dark"
+            android:onClick="calculate"
+            android:padding="15dp"
+            android:tag="0"
+            android:text="@string/answer1"
+            android:textSize="30sp" />
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/totalScoreID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="93dp"
+        android:textColor="@android:color/background_light"
+        android:background="@android:color/holo_blue_dark"
+        android:textSize="24sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/playAgainID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/totalScoreID"
+        android:layout_centerHorizontal="true"
+        android:onClick="playAgainM"
+        android:text="@string/play"
+        android:visibility="invisible" />
+
+</android.widget.RelativeLayout>
